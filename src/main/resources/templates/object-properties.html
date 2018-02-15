@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Object properties</title>
+</head>
+<body>
+	<p th:text="'To call toString(): ' + ${thing}" />
+	<!--  this calls thing.getFirstName() -->
+	<p th:text="'first name is ' + ${thing.firstName}" />
+	<p th:text="'last name is ' + ${thing.lastName}" />
+	<p th:text="'full name is ' + ${thing.fullName}" />
+	
+	<!-- this uses a default model attribute name -->
+	<p th:text="'I am not a thing, I am a ' + ${person} + '!'" />
+	
+	<!-- this is how we call a method (remember the parentheses)! -->
+	<p th:text="|My full name is ${person.getFullName()}!|" />
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Iterable(s)</title>
+</head>
+<body>
+	<p th:each="currentThing: ${myIterable}"
+		th:text="'The element is ' + ${currentThing} + '!'" />
+
+	<h2>And now for something completely different</h2>
+	<div th:each="person: ${myIterable}">
+		<p th:text="|First name is ${person.firstName}.|" />
+		<p th:text="|Last name is ${person.lastName}.|" />
+	</div>
+</body>
+</html>

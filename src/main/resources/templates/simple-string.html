@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Simple String</title>
+</head>
+<body>
+	<!-- will render as <p>Hello, name!</p> -->
+	<p th:text="'Hello, ' + ${name} + '!'" />
+</body>
+</html>
